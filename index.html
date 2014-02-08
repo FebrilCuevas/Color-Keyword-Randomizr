@@ -1,0 +1,24 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	</head>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#pick_color').click(function(){
+
+			var num = Math.round(Math.random()*145)+1;
+			//get images
+			$.get("gallery.php", {col:num}, function(data){
+				$("#colorhistory").prepend(data);
+			});
+		});
+	});
+	</script>
+	<body>
+	<input type="button" id="pick_color" value="Pick a Random Color"/>
+	<div id="colorhistory">
+	</div>
+	</body>
+	</html>
