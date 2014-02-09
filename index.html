@@ -1,0 +1,40 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Color Keyword Randomizr</title>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/normalize.css"/>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:700,400,600,300italic' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+</head>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#pick_color').click(function(){
+
+		var num = Math.round(Math.random()*145)+1;
+			//get colors
+			$.get("php/colors.php", {col:num}, function(data){
+				$("#colorhistory").prepend($(data).fadeIn('slow'));
+			});
+		});
+});
+</script>
+	<body>
+		<div class="main">
+			<div class="wrap">
+				<img src="images/logobig.png" class="logo"/>
+				<h1 class="headtitle">Color Keyword Randomizr</h1>
+
+				<input type="button" class="randomize" id="pick_color" value="Pick a Random Color!"/>
+			</div>
+		</div>
+		<div id="" class="colorinfo">
+			<h2 class="headdesc">Don't want to use numbers in your CSS?<br> Color Keyword Randomizr outputs a random color with keywords that you can use instead of the numeric values!<h2>
+			</div>
+			<div id="colorhistory" class="colorhistory">
+				<p class="placehold">This is where you will see the colors appear.</p>
+			</div>
+		<a href="https://github.com/FebrilCuevas/Color-Keyword-Randomizr"><img style="z-index: 30; position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
+	</body>
+</html>

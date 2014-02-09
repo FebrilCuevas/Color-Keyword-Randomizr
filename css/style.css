@@ -1,0 +1,187 @@
+/*Styles for the Randomizr*/
+html{
+	height:100%;
+	width: 100%;
+}
+body, .colorbg{
+	margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+}
+li{
+	display: inline-block;
+}
+.main, .colorbg{
+	text-align: center;
+}
+.wrap{
+	float: left;
+	padding-top: 7rem;
+	margin: 0 auto;
+	position: fixed;
+	z-index: 20;
+	width: 25%;
+	height: 100%;
+	background: tomato;
+	color: white;
+	transition: all 250ms ease-in-out;
+	/* Safari */
+	-webkit-transition:all 250ms ease-in-out;
+}
+/*logo*/
+.logo{
+	width: 56px;
+	margin: 1.5em;
+}
+/*title*/
+.headtitle{
+	margin: 0;
+	padding: .8rem;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+/*description*/
+.headdesc{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-size: 1.2rem;
+	padding: 1rem;
+	color: tomato;
+}
+/*RANDOMIZE BUTTON*/
+input.randomize, textarea.hexrgb{
+	border:none;
+}
+input.randomize{
+	margin-top: 3.4rem;
+	padding: .8rem;
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: .7em;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+	background-color: white;
+	color: tomato;
+	transition: all 250ms ease-in-out;
+	/* Safari */
+	-webkit-transition:all 250ms ease-in-out;
+}
+.randomize:hover{
+	color:white;
+	background: tomato;
+	border: 3px solid white;
+} /* mouse over link */
+
+/*-----*/
+.colorhistory, .colorinfo{
+	float: right;
+	z-index: 10;
+	width:75%;
+	text-align: center;
+	transition: all 250ms ease-in-out;
+	/* Safari */
+	-webkit-transition:all 250ms ease-in-out;
+}
+.placehold{
+	text-align:center;
+	color:salmon;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-style:italic;
+	letter-spacing: .04em;
+	padding: .5em;
+}
+/*MySQL Table elements echo*/
+.colorbg{
+	padding: 3rem 3rem 4rem 3rem;
+}
+.keyword{
+	padding-bottom: 1.2rem;
+	font-family: 'Montserrat', sans-serif;
+}
+.hexlabel, .hexrgb{
+	padding: .3rem;
+}
+.hexlabel{
+	margin: .6rem .3rem .6rem .3rem;
+	color: silver;
+	background-color: whitesmoke;
+}
+textarea.hexrgb{
+	margin: .3rem;
+	resize: none;
+	font-size: .8rem;
+	color: grey;
+	background-color: whitesmoke;
+	border-radius: 2px;
+}
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 1160px) {
+	.wrap{
+		min-width: 45%;
+	}
+	.colorhistory, .colorinfo{
+		max-width:55%;
+	}
+	/*RANDOMIZE BUTTON*/
+	input.randomize{
+		font-size: .69em;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.wrap{
+		min-width: 45%;
+	}
+	.colorhistory, .colorinfo{
+		max-width:55%;
+	}
+	.headdesc{
+		font-size: 1rem;
+	}
+	.colorbg{
+		padding: 1rem;
+	}
+	.keyword{
+		font-size: 1.5em;
+	}
+}
+@media only screen and (max-width: 730px) {
+	.wrap{
+		padding-top: .3em;
+		position: relative;
+		float: none;
+		min-width: 100%;
+		height: 250px;
+	}
+	.colorhistory, .colorinfo{
+		position: relative;
+		float: none;
+		width: 100%;
+		max-width: 100%;
+	}
+	.headdesc{
+		font-size: .8em;
+	}
+	/*title*/
+	.headtitle{
+		padding-top: 0;
+		font-size: 1.5rem;
+	}
+	/*RANDOMIZE BUTTON*/
+	input.randomize{
+		margin-top: .3em;
+	}
+	/*MySQL Table elements echo*/
+	.colorbg{
+		padding: 1.5rem;
+	}
+	.keyword{
+		font-size: 1.25em;
+	}
+	.hexlabel{
+		font-size: .85rem;
+		color: silver;
+		background-color: whitesmoke;
+	}
+}
